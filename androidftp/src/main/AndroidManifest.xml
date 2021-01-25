@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.minitools.androidftp">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/swiftp_name"
+        android:requestLegacyExternalStorage="true">
+
+        <activity
+            android:name="com.minitools.androidftp.ui.FtpMainActivity"
+            android:theme="@style/AppThemeDark" />
+
+        <activity
+            android:name="com.minitools.androidftp.ui.AboutActivity"
+            android:parentActivityName="com.minitools.androidftp.ui.FtpMainActivity"
+            android:theme="@style/AppThemeDark" />
+
+        <activity
+            android:name="com.minitools.androidftp.ui.ManageUsersActivity"
+            android:parentActivityName="com.minitools.androidftp.ui.FtpMainActivity"
+            android:theme="@style/AppThemeDark" />
+
+        <service android:name="com.minitools.androidftp.FsService" />
+
+        <service android:name="com.minitools.androidftp.NsdService" />
+
+        <service android:name="com.minitools.androidftp.AutoConnect$BackgroundService" />
+
+        <service android:name="com.minitools.androidftp.AutoConnect$StartServerService" />
+        <service android:name="com.minitools.androidftp.AutoConnect$StopServerService" />
+
+        <receiver
+            android:name="com.minitools.androidftp.ui.FsWidgetProvider"
+            android:exported="false"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/swiftp_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="be.ppareit.swiftp.FTPSERVER_STARTED" />
+                <action android:name="be.ppareit.swiftp.FTPSERVER_STOPPED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+        <service android:name="com.minitools.androidftp.ui.FsWidgetProvider$UpdateService" />
+
+        <!-- Tasker/Locale integration -->
+        <activity
+            android:name="com.minitools.androidftp.local.EditActivity"
+            android:exported="true"
+            android:icon="@drawable/widget_on"
+            android:label="@string/swiftp_name"
+            android:theme="@style/AppThemeDark"
+            android:uiOptions="splitActionBarWhenNarrow"
+            android:windowSoftInputMode="adjustResize">
+            <!-- this Intent filter allows the plug-in to be discovered by the host. -->
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.minitools.androidftp.local.FireReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.FIRE_SETTING" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.minitools.androidftp.ui.FsTileService"
+            android:icon="@mipmap/ic_qs_ftp_server"
+            android:label="@string/swiftp_name"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+
+        </service>
+
+    </application>
+
+</manifest>
