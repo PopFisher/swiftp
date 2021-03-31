@@ -19,14 +19,16 @@ along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
 <resources>
-    <string name="swiftp_name">FTP Server</string>
+    <string name="swiftp_name_free">FTP 服务器 (Free)</string>
+    <string name="swiftp_name_demo">FTP 服务器 (Demo)</string>
+    <string name="swiftp_name">FTP 服务器</string>
     <string name="running_label">正在运行</string>
-    <string name="running_summary_stopped">开始 FTP server</string>
-    <string name="running_summary_started">FTP server 运行于 %s 端口</string>
-    <string name="running_summary_failed">FTP server 启动失败，您尚未连接到 Wi-Fi 或以太网络？</string>
+    <string name="running_summary_stopped">开始 FTP 服务器</string>
+    <string name="running_summary_started">FTP 服务器 运行于 %s 端口</string>
+    <string name="running_summary_failed">FTP 服务器 启动失败，您尚未连接到 Wi-Fi 或以太网络？</string>
     <string name="market_version_label">市场版本</string>
-    <string name="market_version_summary">欢迎使用 FTP Server Demo 版本。
-        您可以通过在 Google Play 中购买 FTP Server 以支持开发者。
+    <string name="market_version_summary">欢迎使用 FTP 服务器 Demo 版本。
+        您可以通过在 Google Play 中购买 FTP 服务器 以支持开发者。
 		点击此处跳转至 Google Play 市场。</string>
     <string name="settings_label">设置</string>
     <string name="username_label">用户名</string>
@@ -39,8 +41,12 @@ along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
     <string name="wakelock_label">保持设备唤醒（最大 CPU 频率）</string>
     <string name="extra_label">其他</string>
     <string name="help_label">帮助...</string>
-    <string name="about_label">关于...</string>
-    <string name="help_dlg_title">FTP Server 帮助</string>
+    <string name="help_dlg_title">FTP服务器帮助</string>
+    <string name="allow_anonymous_label">允许匿名登录</string>
+    <string name="anonymous_summary">匿名登录仅允许读取</string>
+    <string name="writeExternalStorage_label">写入外部存储</string>
+    <string name="user_label">用户</string>
+    <string name="login_settings_label">登录设置</string>
     <string name="help_dlg_message">\
 感谢您使用 FTP Server (SwiFTP)！这里有一些简要的使用说明。更多
 使用信息您可登陆 http://ppareit.github.com/swiftp/ 查看。\n\n\
@@ -72,7 +78,7 @@ https://github.com/ppareit/swiftp/issues 提交您的建议。\n\n
     <string name="nsd_servername_postfix">FTP Server</string>
 
     <string name="notification_server_starting">启动于 %s 端口</string>
-    <string name="notification_title">FTP Server 正在运行</string>
+    <string name="notification_title">FTP服务器正在运行</string>
     <string name="notification_text">服务运行于 %s 端口</string>
 
     <string name="running_summary_failed_to_get_ip_address">无法检索 URL</string>
@@ -81,5 +87,37 @@ https://github.com/ppareit/swiftp/issues 提交您的建议。\n\n
     <string name="port_validation_error">端口号必须在 1 至 65535 之间。</string>
     <string name="storage_warning">警告：当前存储暂不可用，您可能需要取消挂载。</string>
     <string name="widget_name">FTP Server Widget</string>
+    <string name="notification_stop_text">停止服务器</string>
+    <string name="select">选择</string>
+    <string name="cancel">取消</string>
+    <string name="autoconnect_label">自动连接设置</string>
+    <string name="autoconnect_summary">选择要自动连接的Wifi网络</string>
+    <string name="autoconnect_error_enable_wifi_for_access_points">
+        启用wifi获取访问列表
+    </string>
+    <string name="notif_settings_text">设置</string>
+    <string name="app_theme">主题</string>
+    <string name="dark_theme">Dark 主题</string>
+    <string name="light_theme">Light 主题</string>
+    <string name="mixed_theme">Mixed 主题</string>
+    <string name="feedback">发送反馈</string>
 
+    <string name="unable_to_proceed_no_permissions">没有所需的权限，无法继续操作</string>
+    <string name="manage_users_label">管理用户</string>
+    <string name="edit">编辑</string>
+    <string name="delete">删除</string>
+    <string name="save">保存</string>
+    <string name="user_exists_error">用户名重复!</string>
+    <string name="confirm_delete_message">删除用户 \'%1$s\'?</string>
+    <string name="notice_cant_read_write">请注意，我们无法在此文件夹中进行读/写</string>
+    <string name="notice_cant_write">请注意，我们无法在此文件夹中写入，可以进行读取。 在子文件夹中写入可能会起作用。</string>
+    <string name="manage_users_no_users">没有可用的用户，请创建一个用户</string>
+    <string name="manage_users_multiple_users">有多个用户可用，请查看列表</string>
+    <string name="gui_settings_label">主题</string>
+    <string name="show_notification_icon_summary">在服务器运行时显示通知图标</string>
+    <string name="show_notification_icon">显示通知图标</string>
+    <string name="auto_connect_stop_server_remove_from_list">
+        在连接到我们自动连接的wifi网络时停止FTP服务器。 从设置中删除此wifi网络
+    </string>
+    <string name="write_external_storage_old_android_version_summary">On these devices, all store is available using the file hierarchy.</string>
 </resources>

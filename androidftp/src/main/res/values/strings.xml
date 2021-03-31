@@ -64,7 +64,6 @@ along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
     <string name="writeExternalStorage_label">Writing external storage</string>
     <string name="extra_label">Extra</string>
     <string name="help_label">Help...</string>
-    <string name="about_label">About...</string>
     <string name="help_dlg_title">FTP Server Help</string>
     <!--string is too long to translate, when editing, split it in logical parts, see issue #105-->
     <string name="help_dlg_message">\
@@ -106,22 +105,11 @@ https://github.com/ppareit/swiftp/issues .\n\n
     <string name="cancel">Cancel</string>
 
     <string name="feedback">Send feedback</string>
-    <string name="about">About</string>
 
     <string name="autoconnect_label">Autoconnect settings...</string>
     <string name="autoconnect_summary">Select the wifi networks on which to autoconnect</string>
     <string name="autoconnect_error_enable_wifi_for_access_points">
         Enable wifi to get list of access points
-    </string>
-
-    <string name="demo_while_paid_dialog_title">
-        Demo started while paid version is installed
-    </string>
-    <string name="demo_while_paid_dialog_message">
-        Thank you for supporting the development!\n\n
-        You are trying to start the demo version while the paid version
-        is installed. To insure optimal operation we ask you to remove
-        the demo version and only start the paid version.
     </string>
 
     <string name="storage_warning">
@@ -132,35 +120,11 @@ https://github.com/ppareit/swiftp/issues .\n\n
     <!-- auto added strings by AS -->
     <string name="widget_name">FTP Server Widget</string>
     <string name="notif_settings_text">Settings</string>
-    <string name="app_copyright">Copyright 2012 - 2017</string>
-    <string name="app_url" translatable="false">
-        https://ppareit.github.io/swiftp/
-    </string>
-    <string name="about_license_title">License</string>
-    <string name="about_license_name">GNU GPL3</string>
-    <string name="about_license_url" translatable="false">
-        https://www.gnu.org/licenses/gpl-3.0.en.html
-    </string>
-    <string name="about_description_title">Description</string>
-    <string name="about_description_text">
-        FTP Server (SwiFTP) allows you to run an ftp server on your android device.
-    </string>
-    <string name="about_libraries_title">Libraries</string>
-    <string name="about_contributor_title">Contributors</string>
-    <string name="about_contributor_list" translatable="false">
-        Dave Revell, Alexander Friesen, tescott425, Peng Fei, MadMaverick9, j3l11234,
-        Sergey Kondakov, Tianhao Wu, Lorenzo M, Naofumi Fukue, Valerio Bozzolan,
-        Thomas Löwe, Mladen Pejaković, valentind44, Ashutosh Gangwar, Nicoss, Poussinou,
-        Timotheos Constambeys, chankruze, Waldemar Stoczkowski, Terry Hooper,
-        Birgit Niemegeers
-    </string>
 
     <string name="app_theme">Theme...</string>
     <string name="dark_theme">Dark Theme</string>
     <string name="light_theme">Light Theme</string>
     <string name="mixed_theme">Mixed Theme</string>
-    <string name="unable_to_start_mail_client">Unable to start mail client to send feedback.</string>
-    <string name="use_english">Please use clear English!</string>
 
     <!-- since 2.18 -->
     <string name="request_coarse_location_dlg_title">Request permission for location</string>

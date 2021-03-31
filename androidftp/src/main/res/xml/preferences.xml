@@ -95,9 +95,6 @@ along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
         <Preference
             android:key="help"
             android:title="@string/help_label" />
-        <Preference
-            android:key="about"
-            android:title="@string/about_label" />
     </PreferenceCategory>
 
 </PreferenceScreen>

@@ -290,13 +290,6 @@ public class PreferenceFragment
                     Linkify.ALL);
             return true;
         });
-
-        Preference aboutPref = findPref("about");
-        aboutPref.setOnPreferenceClickListener(preference -> {
-            startActivity(new Intent(getActivity(), AboutActivity.class));
-            return true;
-        });
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)

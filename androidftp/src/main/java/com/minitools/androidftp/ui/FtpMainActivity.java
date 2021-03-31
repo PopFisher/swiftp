@@ -19,30 +19,23 @@
 
 package com.minitools.androidftp.ui;
 
-import android.app.AlertDialog;
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Build.VERSION;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.minitools.androidftp.FtpAndroid;
 import com.minitools.androidftp.FsSettings;
 import com.minitools.androidftp.R;
 
-import net.vrallev.android.cat.BuildConfig;
 import net.vrallev.android.cat.Cat;
 
 import java.util.Arrays;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
@@ -64,16 +57,6 @@ public class FtpMainActivity extends AppCompatActivity {
 
         if (!haveReadWritePermissions()) {
             requestReadWritePermissions();
-        }
-
-        if (FtpAndroid.isFreeVersion() && FtpAndroid.isPaidVersionInstalled()) {
-            Cat.d("Running demo while paid is installed");
-            AlertDialog ad = new AlertDialog.Builder(this)
-                    .setTitle(R.string.demo_while_paid_dialog_title)
-                    .setMessage(R.string.demo_while_paid_dialog_message)
-                    .setPositiveButton(getText(android.R.string.ok), (d, w) -> finish())
-                    .create();
-            ad.show();
         }
 
         getFragmentManager().beginTransaction()
@@ -131,29 +114,7 @@ public class FtpMainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if (item.getItemId() == R.id.action_feedback) {
-            String to = "pieter.pareit@gmail.com";
-            String subject = "FTP Server feedback";
-            String message = "Device: " + Build.MODEL + "\n" +
-                    "Android version: " + VERSION.RELEASE + "-" + VERSION.SDK_INT + "\n" +
-                    "Application: " + BuildConfig.APPLICATION_ID + " (" + BuildConfig.FLAVOR + ")\n" +
-                    "Application version: " + BuildConfig.VERSION_NAME + " - " + BuildConfig.VERSION_CODE + "\n" +
-                    "Feedback: \n_";
 
-            Intent emailIntent = new Intent(Intent.ACTION_SEND);
-            emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{to});
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
-            emailIntent.putExtra(Intent.EXTRA_TEXT, message);
-            emailIntent.setType("message/rfc822");
-
-            try {
-                startActivity(emailIntent);
-                Toast.makeText(this, R.string.use_english, Toast.LENGTH_LONG).show();
-            } catch (ActivityNotFoundException exception) {
-                Toast.makeText(this, R.string.unable_to_start_mail_client, Toast.LENGTH_LONG).show();
-            }
-
-        } else if (item.getItemId() == R.id.action_about) {
-            startActivity(new Intent(this, AboutActivity.class));
         }
 
         return true;
