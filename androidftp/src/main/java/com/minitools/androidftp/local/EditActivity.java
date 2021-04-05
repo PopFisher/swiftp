@@ -61,7 +61,7 @@ public class EditActivity extends AbstractAppCompatPluginActivity {
             setTitle(callingApplicationLabel);
         }
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setSubtitle(R.string.swiftp_name);
+            getSupportActionBar().setSubtitle(R.string.android_ftp_name);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }

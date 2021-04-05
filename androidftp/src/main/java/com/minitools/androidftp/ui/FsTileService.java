@@ -52,13 +52,13 @@ public class FsTileService extends TileService {
             InetAddress address = FsService.getLocalInetAddress();
             if (address == null) {
                 Cat.v("Unable to retrieve wifi ip address");
-                tile.setLabel(getString(R.string.swiftp_name));
+                tile.setLabel(getString(R.string.android_ftp_name));
                 return;
             }
             tile.setLabel(address.getHostAddress() + ":" + FsSettings.getPortNumber());
         } else {
             tile.setState(Tile.STATE_INACTIVE);
-            tile.setLabel(getString(R.string.swiftp_name));
+            tile.setLabel(getString(R.string.android_ftp_name));
         }
         tile.updateTile();
     }

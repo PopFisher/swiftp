@@ -121,7 +121,7 @@ public class FsWidgetProvider extends AppWidgetProvider {
             } else {
                 action = FsService.ACTION_REQUEST_START;
                 drawable = R.drawable.widget_off;
-                text = getString(R.string.swiftp_name);
+                text = getString(R.string.android_ftp_name);
             }
             Intent startIntent = new Intent(FtpAndroid.getAppContext(), FsService.class);
             startIntent.setAction(action);

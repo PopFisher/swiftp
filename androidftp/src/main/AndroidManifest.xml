@@ -17,7 +17,7 @@
 
     <application
         android:allowBackup="true"
-        android:label="@string/swiftp_name"
+        android:label="@string/android_ftp_name"
         android:requestLegacyExternalStorage="true">
 
         <activity
@@ -46,7 +46,7 @@
             android:name="com.minitools.androidftp.ui.FsWidgetProvider"
             android:exported="false"
             android:icon="@mipmap/ic_qs_ftp_server"
-            android:label="@string/swiftp_name">
+            android:label="@string/android_ftp_name">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="com.minitools.androidftp.FTPSERVER_STARTED" />
@@ -64,7 +64,7 @@
             android:name="com.minitools.androidftp.local.EditActivity"
             android:exported="true"
             android:icon="@drawable/widget_on"
-            android:label="@string/swiftp_name"
+            android:label="@string/android_ftp_name"
             android:theme="@style/AppThemeLight"
             android:uiOptions="splitActionBarWhenNarrow"
             android:windowSoftInputMode="adjustResize">
@@ -85,7 +85,7 @@
         <service
             android:name="com.minitools.androidftp.ui.FsTileService"
             android:icon="@mipmap/ic_qs_ftp_server"
-            android:label="@string/swiftp_name"
+            android:label="@string/android_ftp_name"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
 
             <intent-filter>
