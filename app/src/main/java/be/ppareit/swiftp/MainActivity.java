@@ -13,4 +13,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         FtpAndroid.startFtpMainActivity(this);
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (isFinishing()) {
+            FtpAndroid.onDestroy();
+        }
+    }
 }

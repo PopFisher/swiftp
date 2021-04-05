@@ -131,9 +131,9 @@ public class FsSettings {
     public static int getPortNumber() {
         final SharedPreferences sp = getSharedPreferences();
         // TODO: port is always an number, so store this accordingly
-        String portString = sp.getString("portNum", "2121");
+        String portString = sp.getString("portNum", "2222");
         if (portString == null) {
-            portString = "2121";
+            portString = "2222";
         }
         int port = Integer.valueOf(portString);
         Log.v(TAG, "Using port: " + port);
@@ -143,6 +143,11 @@ public class FsSettings {
     public static boolean shouldTakeFullWakeLock() {
         final SharedPreferences sp = getSharedPreferences();
         return sp.getBoolean("stayAwake", false);
+    }
+
+    public static boolean isCloseOnAppExit() {
+        final SharedPreferences sp = getSharedPreferences();
+        return sp.getBoolean("close_on_exit", true);
     }
 
     public static Set<String> getAutoConnectList() {

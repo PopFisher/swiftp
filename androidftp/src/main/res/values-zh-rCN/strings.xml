@@ -19,22 +19,17 @@ along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
 <resources>
-    <string name="swiftp_name_free">FTP 服务器 (Free)</string>
-    <string name="swiftp_name_demo">FTP 服务器 (Demo)</string>
-    <string name="swiftp_name">FTP 服务器</string>
+    <string name="swiftp_name">FTP服务器</string>
     <string name="running_label">正在运行</string>
-    <string name="running_summary_stopped">开始 FTP 服务器</string>
-    <string name="running_summary_started">FTP 服务器 运行于 %s 端口</string>
-    <string name="running_summary_failed">FTP 服务器 启动失败，您尚未连接到 Wi-Fi 或以太网络？</string>
+    <string name="running_summary_stopped">启动FTP服务器</string>
+    <string name="running_summary_started">FTP服务器运行于 %s 端口</string>
+    <string name="running_summary_failed">FTP服务器启动失败，您尚未连接到 Wi-Fi 或以太网络？</string>
     <string name="market_version_label">市场版本</string>
-    <string name="market_version_summary">欢迎使用 FTP 服务器 Demo 版本。
-        您可以通过在 Google Play 中购买 FTP 服务器 以支持开发者。
-		点击此处跳转至 Google Play 市场。</string>
     <string name="settings_label">设置</string>
     <string name="username_label">用户名</string>
     <string name="password_label">密码</string>
     <string name="show_password_label">显示密码</string>
-    <string name="advanced_settings_label">高级设置...</string>
+    <string name="advanced_settings_label">高级设置</string>
     <string name="port_number_label">端口号</string>
     <string name="chroot_label">设为根目录</string>
     <string name="accept_wifi_label">接受 Wi-Fi 连接</string>
@@ -48,9 +43,9 @@ along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
     <string name="user_label">用户</string>
     <string name="login_settings_label">登录设置</string>
     <string name="help_dlg_message">\
-此功能允许您在Android设备中运行FTP服务器，当您开启FTP服务的时候任何程序均可访问您设备中的所有文件，例如在桌面端或笔记本的浏览器地址栏中输入 \"ftp://...\" 即可浏览您设备中的所有文件。\n\n
+此功能允许您在Android设备中运行FTP服务器，当您开启FTP服务的时候任何程序均可访问您设备中的所有文件，例如在桌面端或笔记本的文件浏览器地址栏中输入 \"ftp://...\" 即可浏览您设备中的所有文件。\n\n
 \
-用户名以及密码默认值均为 \"ftp\"，您应该在使用时修改它们，并且使用此用户名以及密码访问此服务器。\n\n
+用户名以及密码默认值均为 \"ftp123\"，您应该在使用时修改它们，并且使用此用户名以及密码访问此服务器。\n\n
 \
 在配置选项中的“保持设备唤醒”可以修复当设备休眠时传输速度缓慢或完全停止的问题，若您出现了此问题，请选中此复选框并重启程序后重试。您的设备将在服务运行时保持唤醒。\n\n
 \
@@ -100,5 +95,13 @@ along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
     <string name="auto_connect_stop_server_remove_from_list">
         在连接到我们自动连接的wifi网络时停止FTP服务器。 从设置中删除此wifi网络
     </string>
-    <string name="write_external_storage_old_android_version_summary">On these devices, all store is available using the file hierarchy.</string>
+    <string name="write_external_storage_old_android_version_summary">在这些设备上，所有文件目录下的文件都可以访问.</string>
+    <string name="open_ftp">打开</string>
+    <string name="net_state">网络状态</string>
+    <string name="ftp_use_tip">打开后可以在计算机上管理本设备上的文件\n设备与计算机网络必须在同一局域网内</string>
+    <string name="ftp_input_tip">在计算机文件浏览器地址栏中输入：</string>
+    <string name="close_ftp">关闭</string>
+    <string name="share_to">分享到</string>
+    <string name="copy_2_clipboard_tip">ftp地址复制成功</string>
+    <string name="close_on_exit_label">应用退出时关闭</string>
 </resources>

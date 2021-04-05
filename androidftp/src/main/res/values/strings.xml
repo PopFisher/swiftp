@@ -21,8 +21,6 @@ along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
 <resources>
 
     <string name="swiftp_name">FTP Server</string>
-    <string name="swiftp_name_free">FTP Server (Free)</string>
-    <string name="swiftp_name_demo">FTP Server (Demo)</string>
     <string name="running_label">FTP Server</string>
     <string name="running_summary_stopped">Toggle the state of the ftp server</string>
     <string name="running_summary_started">at %s</string>
@@ -34,11 +32,6 @@ along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
     </string>
 
     <string name="market_version_label">Market version</string>
-    <string name="market_version_summary">
-        This is the FTP Server Demo version.
-        Support development by getting the FTP Server from the android market.
-        Click here to go to the market.
-    </string>
     <string name="settings_label">Settings</string>
     <string name="user_label">User</string>
     <string name="login_settings_label">Login settings...</string>
@@ -55,7 +48,7 @@ along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
     </string>
     <string name="allow_anonymous_label">Allow anonymous login</string>
     <string name="anonymous_summary">Anonymous logins are only allowed read access</string>
-    <string name="advanced_settings_label">Advanced settings...</string>
+    <string name="advanced_settings_label">Advanced settings</string>
     <string name="port_number_label">Port Number</string>
     <string name="port_validation_error">The port number must be in the range 1 to 65535.</string>
     <string name="chroot_label">Stay in folder</string>
@@ -72,7 +65,7 @@ program can access the files on your device while the ftp server is running. For
 entering \'ftp://...\' in the firefox url bar will allow you to browse the files on your
 device from a desktop pc or a laptop.\n\n
 \
-By default, the user name and password are both \'ftp\', you should change them. You use
+By default, the user name and password are both \'ftp123\', you should change them. You use
 this username and password when accessing the server.\n\n
 \
 There is a configuration option (\"keep phone awake\") that fixes a problem where
@@ -132,5 +125,13 @@ For power and security reasons, it is recommended that the server be stopped aft
         Stopping FTP Server while connected to a wifi network we automatically connected to. Removing this wifi network from the preferences
     </string>
     <string name="write_external_storage_old_android_version_summary">On these devices, all store is available using the file hierarchy.</string>
+    <string name="open_ftp">Open</string>
+    <string name="net_state">network status</string>
+    <string name="ftp_use_tip">After opening, you can manage the files on the device on the computer\nThe device and the computer network must be in the same local area network</string>
+    <string name="ftp_input_tip">Enter in the address bar of the computer file browser:</string>
+    <string name="close_ftp">Close</string>
+    <string name="share_to">Share To</string>
+    <string name="copy_2_clipboard_tip">Ftp address copied successfully</string>
+    <string name="close_on_exit_label">Close when app exits</string>
 
 </resources>

@@ -85,24 +85,6 @@ public class PreferenceFragment
             return true;
         });
 
-        PreferenceScreen prefScreen = findPref("preference_screen");
-        Preference marketVersionPref = findPref("market_version");
-        if (!FtpAndroid.isFreeVersion()) {
-            prefScreen.removePreference(marketVersionPref);
-        }
-        if (!(FtpAndroid.isPackageInstalled("com.android.vending") ||
-                FtpAndroid.isPackageInstalled("com.google.market"))) {
-            prefScreen.removePreference(marketVersionPref);
-        }
-        marketVersionPref.setOnPreferenceClickListener(preference -> {
-            // start the market at our application
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.setData(Uri.parse("market://details?id=com.minitools.androidftp"));
-            startActivity(intent);
-            return false;
-        });
-
         Preference manageUsersPref = findPref("manage_users");
         updateUsersPref();
         manageUsersPref.setOnPreferenceClickListener((preference) -> {
@@ -338,9 +320,7 @@ public class PreferenceFragment
             Cat.d("Action Open Document Tree on path " + path);
 
             final CheckBoxPreference writeExternalStoragePref = findPref("writeExternalStorage");
-            if (!":".equals(path.substring(path.length() - 1)) || path.contains("primary")) {
-                writeExternalStoragePref.setChecked(false);
-            } else {
+            if (":".equals(path.substring(path.length() - 1)) && path.contains("primary")) {
                 FsSettings.setExternalStorageUri(treeUri.toString());
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                     getActivity().getContentResolver()
@@ -349,6 +329,8 @@ public class PreferenceFragment
                                             | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
                 }
                 writeExternalStoragePref.setChecked(true);
+            } else {
+                writeExternalStoragePref.setChecked(false);
             }
         }
     }

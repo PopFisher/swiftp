@@ -27,7 +27,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 
 import com.minitools.androidftp.ui.FsWidgetProvider;
-import com.minitools.androidftp.ui.FtpSettingActivity;
+import com.minitools.androidftp.ui.FtpMainActivity;
 
 import net.vrallev.android.cat.Cat;
 
@@ -48,6 +48,12 @@ public class FtpAndroid {
         application.registerReceiver(new FsWidgetProvider(), intentFilter);
 
 //        AutoConnect.maybeStartService(application);
+    }
+
+    public static void onDestroy() {
+        if (FsSettings.isCloseOnAppExit()) {
+            FsService.stop();
+        }
     }
 
     /**
@@ -109,7 +115,7 @@ public class FtpAndroid {
     }
 
     public static void startFtpMainActivity(Activity mainActivity) {
-        Intent intent = new Intent(mainActivity, FtpSettingActivity.class);
+        Intent intent = new Intent(mainActivity, FtpMainActivity.class);
         mainActivity.startActivity(intent);
     }
 }
