@@ -61,13 +61,13 @@ public class FsService extends Service implements Runnable {
     private static final String TAG = FsService.class.getSimpleName();
 
     // Service will check following actions when started through intent
-    static public final String ACTION_REQUEST_START = "be.ppareit.swiftp.REQUEST_START";
-    static public final String ACTION_REQUEST_STOP = "be.ppareit.swiftp.REQUEST_STOP";
+    static public final String ACTION_REQUEST_START = "com.minitools.androidftp.REQUEST_START";
+    static public final String ACTION_REQUEST_STOP = "com.minitools.androidftp.REQUEST_STOP";
 
     // Service will (global) broadcast when server start/stop
-    static public final String ACTION_STARTED = "be.ppareit.swiftp.FTPSERVER_STARTED";
-    static public final String ACTION_STOPPED = "be.ppareit.swiftp.FTPSERVER_STOPPED";
-    static public final String ACTION_FAILEDTOSTART = "be.ppareit.swiftp.FTPSERVER_FAILEDTOSTART";
+    static public final String ACTION_STARTED = "com.minitools.androidftp.FTPSERVER_STARTED";
+    static public final String ACTION_STOPPED = "com.minitools.androidftp.FTPSERVER_STOPPED";
+    static public final String ACTION_FAILEDTOSTART = "com.minitools.androidftp.FTPSERVER_FAILEDTOSTART";
 
     protected static Thread serverThread = null;
     protected boolean shouldExit = false;

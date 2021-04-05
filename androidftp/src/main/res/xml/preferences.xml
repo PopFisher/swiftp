@@ -44,29 +44,29 @@ along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
             android:summary="@string/anonymous_summary"
             android:title="@string/allow_anonymous_label" />
 
-        <com.minitools.androidftp.android.DynamicMultiSelectListPreference
-            android:defaultValue="@array/empty_array"
-            android:entries="@array/empty_array"
-            android:entryValues="@array/empty_array"
-            android:key="autoconnect_preference"
-            android:summary="@string/autoconnect_summary"
-            android:title="@string/autoconnect_label" />
+<!--        <com.minitools.androidftp.android.DynamicMultiSelectListPreference-->
+<!--            android:defaultValue="@array/empty_array"-->
+<!--            android:entries="@array/empty_array"-->
+<!--            android:entryValues="@array/empty_array"-->
+<!--            android:key="autoconnect_preference"-->
+<!--            android:summary="@string/autoconnect_summary"-->
+<!--            android:title="@string/autoconnect_label" />-->
 
-        <PreferenceScreen
-            android:key="appearance_screen"
-            android:title="@string/gui_settings_label">
-            <ListPreference
-                android:defaultValue="0"
-                android:entries="@array/pref_list_themes"
-                android:entryValues="@array/pref_list_themes_values"
-                android:key="theme"
-                android:title="@string/app_theme" />
-            <CheckBoxPreference
-                android:defaultValue="true"
-                android:key="show_notification_icon_preference"
-                android:summary="@string/show_notification_icon_summary"
-                android:title="@string/show_notification_icon" />
-        </PreferenceScreen>
+<!--        <PreferenceScreen-->
+<!--            android:key="appearance_screen"-->
+<!--            android:title="@string/gui_settings_label">-->
+<!--            <ListPreference-->
+<!--                android:defaultValue="0"-->
+<!--                android:entries="@array/pref_list_themes"-->
+<!--                android:entryValues="@array/pref_list_themes_values"-->
+<!--                android:key="theme"-->
+<!--                android:title="@string/app_theme" />-->
+<!--            <CheckBoxPreference-->
+<!--                android:defaultValue="true"-->
+<!--                android:key="show_notification_icon_preference"-->
+<!--                android:summary="@string/show_notification_icon_summary"-->
+<!--                android:title="@string/show_notification_icon" />-->
+<!--        </PreferenceScreen>-->
 
 
         <PreferenceScreen

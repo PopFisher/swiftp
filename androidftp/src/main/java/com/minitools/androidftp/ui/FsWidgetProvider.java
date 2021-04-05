@@ -82,7 +82,7 @@ public class FsWidgetProvider extends AppWidgetProvider {
                 Cat.e("We were unable to receive the notification manager.");
                 return START_NOT_STICKY;
             }
-            String channelId = "be.ppareit.swiftp.widget_provider.channelId";
+            String channelId = "com.minitools.androidftp.widget_provider.channelId";
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 CharSequence name = "Update's the notification";
                 String description = "This notification checks if the FTP Server is running.";

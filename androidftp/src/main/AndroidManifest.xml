@@ -3,7 +3,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.minitools.androidftp">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,7 +12,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
@@ -21,22 +21,22 @@
         android:requestLegacyExternalStorage="true">
 
         <activity
-            android:name="com.minitools.androidftp.ui.FtpMainActivity"
-            android:theme="@style/AppThemeDark" />
+            android:name="com.minitools.androidftp.ui.FtpSettingActivity"
+            android:theme="@style/AppThemeLight" />
 
         <activity
             android:name="com.minitools.androidftp.ui.ManageUsersActivity"
-            android:parentActivityName="com.minitools.androidftp.ui.FtpMainActivity"
-            android:theme="@style/AppThemeDark" />
+            android:parentActivityName="com.minitools.androidftp.ui.FtpSettingActivity"
+            android:theme="@style/AppThemeLight" />
 
         <service android:name="com.minitools.androidftp.FsService" />
 
         <service android:name="com.minitools.androidftp.NsdService" />
 
-        <service android:name="com.minitools.androidftp.AutoConnect$BackgroundService" />
+<!--        <service android:name="com.minitools.androidftp.AutoConnect$BackgroundService" />-->
 
-        <service android:name="com.minitools.androidftp.AutoConnect$StartServerService" />
-        <service android:name="com.minitools.androidftp.AutoConnect$StopServerService" />
+<!--        <service android:name="com.minitools.androidftp.AutoConnect$StartServerService" />-->
+<!--        <service android:name="com.minitools.androidftp.AutoConnect$StopServerService" />-->
 
         <receiver
             android:name="com.minitools.androidftp.ui.FsWidgetProvider"
@@ -45,8 +45,8 @@
             android:label="@string/swiftp_name">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="be.ppareit.swiftp.FTPSERVER_STARTED" />
-                <action android:name="be.ppareit.swiftp.FTPSERVER_STOPPED" />
+                <action android:name="com.minitools.androidftp.FTPSERVER_STARTED" />
+                <action android:name="com.minitools.androidftp.FTPSERVER_STOPPED" />
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
@@ -61,7 +61,7 @@
             android:exported="true"
             android:icon="@drawable/widget_on"
             android:label="@string/swiftp_name"
-            android:theme="@style/AppThemeDark"
+            android:theme="@style/AppThemeLight"
             android:uiOptions="splitActionBarWhenNarrow"
             android:windowSoftInputMode="adjustResize">
             <!-- this Intent filter allows the plug-in to be discovered by the host. -->

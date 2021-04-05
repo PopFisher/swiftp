@@ -160,9 +160,9 @@ public class FsSettings {
 
     public static int getTheme() {
         SharedPreferences sp = getSharedPreferences();
-        String theme = sp.getString("theme", "0");
+        String theme = sp.getString("theme", "1");
         if (theme == null) {
-            return R.style.AppThemeDark;
+            return R.style.AppThemeLight;
         }
 
         switch (theme) {

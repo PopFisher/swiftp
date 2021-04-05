@@ -29,8 +29,8 @@ import net.vrallev.android.cat.Cat;
 
 public final class SettingsBundleHelper {
 
-    public static final String BUNDLE_BOOLEAN_RUNNING = "be.ppareit.swiftp.BOOLEAN_RUNNING";
-    public static final String BUNDLE_VERSION_CODE = "be.ppareit.swiftp.VERSION_CODE";
+    public static final String BUNDLE_BOOLEAN_RUNNING = "com.minitools.androidftp.BOOLEAN_RUNNING";
+    public static final String BUNDLE_VERSION_CODE = "com.minitools.androidftp.VERSION_CODE";
 
 
     static public boolean isBundleValid(Bundle bundle) {

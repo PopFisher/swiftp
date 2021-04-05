@@ -27,7 +27,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 
 import com.minitools.androidftp.ui.FsWidgetProvider;
-import com.minitools.androidftp.ui.FtpMainActivity;
+import com.minitools.androidftp.ui.FtpSettingActivity;
 
 import net.vrallev.android.cat.Cat;
 
@@ -43,11 +43,11 @@ public class FtpAndroid {
         intentFilter.addAction(FsService.ACTION_STOPPED);
         intentFilter.addAction(FsService.ACTION_FAILEDTOSTART);
 
-        application.registerReceiver(new AutoConnect.ServerActionsReceiver(), intentFilter);
+//        application.registerReceiver(new AutoConnect.ServerActionsReceiver(), intentFilter);
         application.registerReceiver(new NsdService.ServerActionsReceiver(), intentFilter);
         application.registerReceiver(new FsWidgetProvider(), intentFilter);
 
-        AutoConnect.maybeStartService(application);
+//        AutoConnect.maybeStartService(application);
     }
 
     /**
@@ -73,7 +73,7 @@ public class FtpAndroid {
      * @return true if the paid version is installed on this device
      */
     public static boolean isPaidVersionInstalled() {
-        return isPackageInstalled("be.ppareit.swiftp");
+        return isPackageInstalled("com.minitools.androidftp");
     }
 
     /**
@@ -109,7 +109,7 @@ public class FtpAndroid {
     }
 
     public static void startFtpMainActivity(Activity mainActivity) {
-        Intent intent = new Intent(mainActivity, FtpMainActivity.class);
+        Intent intent = new Intent(mainActivity, FtpSettingActivity.class);
         mainActivity.startActivity(intent);
     }
 }

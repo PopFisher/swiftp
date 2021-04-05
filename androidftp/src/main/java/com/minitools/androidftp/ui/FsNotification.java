@@ -67,7 +67,7 @@ public class FsNotification {
         CharSequence contentTitle = context.getString(R.string.notification_title);
         CharSequence contentText = String.format(context.getString(R.string.notification_text), ipText);
 
-        Intent notificationIntent = new Intent(context, FtpMainActivity.class);
+        Intent notificationIntent = new Intent(context, FtpSettingActivity.class);
         notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent, 0);
 
@@ -80,14 +80,14 @@ public class FsNotification {
 
         int preferenceIcon = android.R.drawable.ic_menu_preferences;
         CharSequence preferenceText = context.getString(R.string.notif_settings_text);
-        Intent preferenceIntent = new Intent(context, FtpMainActivity.class);
+        Intent preferenceIntent = new Intent(context, FtpSettingActivity.class);
         preferenceIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent preferencePendingIntent = PendingIntent.getActivity(context, 0, preferenceIntent, 0);
 
         int priority = FsSettings.showNotificationIcon() ? Notification.PRIORITY_DEFAULT
                 : Notification.PRIORITY_MIN;
 
-        String channelId = "be.ppareit.swiftp.notification.channelId";
+        String channelId = "com.minitools.androidftp.notification.channelId";
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = "Show FTP Server state";
             String description = "This notification shows the current state of the FTP Server";

@@ -79,7 +79,7 @@ public class AutoConnect {
         public int onStartCommand(Intent intent, int flags, int startId) {
 
             NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-            String channelId = "be.ppareit.swiftp.autoconnect.channelId";
+            String channelId = "com.minitools.androidftp.autoconnect.channelId";
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 CharSequence name = "Check the connected wifi networks";
                 String description = "This notification checks the wifi networks and starts/stops the FTP Server when needed.";

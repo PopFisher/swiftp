@@ -22,9 +22,6 @@ package com.minitools.androidftp.ui;
 import android.os.Build;
 import android.os.Build.VERSION;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.minitools.androidftp.FsSettings;
@@ -45,7 +42,7 @@ import static android.content.pm.PackageManager.PERMISSION_GRANTED;
  * This is the main activity for swiftp, it enables the user to start the server service
  * and allows the users to change the settings.
  */
-public class FtpMainActivity extends AppCompatActivity {
+public class FtpSettingActivity extends AppCompatActivity {
 
     final static int PERMISSIONS_REQUEST_CODE = 12;
 
@@ -101,22 +98,5 @@ public class FtpMainActivity extends AppCompatActivity {
                 }
             }
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        if (item.getItemId() == R.id.action_feedback) {
-
-        }
-
-        return true;
     }
 }
